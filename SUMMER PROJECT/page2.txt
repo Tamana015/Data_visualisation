@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign up</title>
+<style>
+body
+{
+background-image:url("ui.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+table
+{
+width:400px;
+height:200px;
+text-align:center;
+background-image:url("mi.jpg");
+
+}
+h1
+{
+font-family: 'Ramabhadra', sans-serif;
+font-size:50px;
+}
+form
+{
+font-family: 'Crete Round', serif;
+font-size:20px;
+}
+
+
+</style>
+</head>
+
+<body >
+<center>
+<table >
+<tr>
+<td>
+<h1>Sign Up</h1>
+<form name="myForm" onsubmit="return validateForm()">
+First Name:
+<input type="text" name="First Name" required>
+<br>
+<br>
+Last Name:
+<input type="text" name="Last Name" required>
+<br>
+<br>
+Gender:
+<select name="dropdown">
+<option value="Male" selected>Male</option><br>
+<option value="female">Female</option><br>
+<option value="others">Others</option><br>
+</select>
+<br>
+<br>
+Age:
+<select name="dropdown">
+<option value="16-24" selected>16-24</option><br>
+<option value="24-36">24-36</option><br>
+<option value="36-50">36-50</option><br>
+<option value="upto 50">upto 50</option><br>
+</select>
+<br>
+<br>
+Email Address:
+<input type="email" name="email address" required><br>
+<br>
+<br>
+ Password:
+<input type="password" inputmode="numeric" minlength="4"
+       maxlength="8" size="20" name="pass1" required>
+<br>
+<br>
+Confirm Password:
+<input type="password" inputmode="numeric" minlength="4"
+       maxlength="8" size="20" name="pass2" required>
+<br>
+<br>
+<input type="submit" value="SIGN UP"/> <br>
+<br>
+<br>
+<a href="login1.html">Already have an account?</a>
+<br>
+<br>
+</form></td></tr></table>
+<center>
+<script type="javascript">
+ function validateForm() {
+  var x = document.form["myForm"]["pass1"].value;
+  var y = document.form["myForm"]["pass2"].value;
+  if (x === y && x != "") {
+    return true;
+  } else {
+   alert("Password doesn't matched");
+ }
+}
+</script>
+</body>
+</html>

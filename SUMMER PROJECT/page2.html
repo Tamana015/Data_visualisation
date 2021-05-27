@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign up</title>
+<style>
+h2
+{
+font-size:70px;
+text-size-70px;
+text-align:center;
+color:black;
+font-family: 'Roboto Slab', serif;
+background-image:url("himlayan.jpg");
+margin:0px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+body
+{
+background-image:url("ui.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+table
+{
+width:400px;
+height:200px;
+text-align:center;
+background-image:url("mi.jpg");
+
+}
+h1
+{
+font-family: 'Ramabhadra', sans-serif;
+font-size:50px;
+}
+form
+{
+font-family: 'Crete Round', serif;
+font-size:20px;
+}
+
+
+</style>
+</head>
+
+<body >
+
+<div><h2>HIMALYAN TOURISM</h2></div>
+<div class="topnav">
+ <a  href="#home"><a href="final 1.html">HOME</a></a>
+  <a href="#Gallery"><a href="gallery home.html">GALLERY</a></a>
+<a href="#contact"> <a href="contact.html"> CONTACT US</a></a>
+  <a href="#about"><a href="about1.html">ABOUT US</a></a>
+<a href="#login"><a href="login1.html">LOGIN</a></a><a href="#SIGN UP"><a href="page2.html">Sign Up</a></a>
+</div>
+<div style="padding-left:16px">
+</div>
+<center>
+<table >
+<tr>
+<td>
+<h1>Sign Up</h1>
+<form name="myForm" onsubmit="return validateForm()">
+First Name:
+<input type="text" name="First Name" required>
+<br>
+<br>
+Last Name:
+<input type="text" name="Last Name" required>
+<br>
+<br>
+Gender:
+<select name="dropdown">
+<option value="Male" selected>Male</option><br>
+<option value="female">Female</option><br>
+<option value="others">Others</option><br>
+</select>
+<br>
+<br>
+Age:
+<select name="dropdown">
+<option value="16-24" selected>16-24</option><br>
+<option value="24-36">24-36</option><br>
+<option value="36-50">36-50</option><br>
+<option value="upto 50">upto 50</option><br>
+</select>
+<br>
+<br>
+Email Address:
+<input type="email" name="email address" required><br>
+<br>
+<br>
+ Password:
+<input type="password" inputmode="numeric" minlength="4"
+       maxlength="8" size="20" name="pass1" required>
+<br>
+<br>
+Confirm Password:
+<input type="password" inputmode="numeric" minlength="4"
+       maxlength="8" size="20" name="pass2" required>
+<br>
+<br>
+<input type="submit" value="SIGN UP"/> <br>
+<br>
+<br>
+<a href="login1.html">Already have an account?</a>
+<br>
+<br>
+</form></td></tr></table>
+<center>
+<script type="javascript">
+ function validateForm() {
+  var x = document.form["myForm"]["pass1"].value;
+  var y = document.form["myForm"]["pass2"].value;
+  if (x === y && x != "") {
+    return true;
+  } else {
+   alert("Password doesn't matched");
+ }
+}
+</script>
+</body>
+</html>

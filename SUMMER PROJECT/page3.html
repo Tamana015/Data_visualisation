@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Forget Password</title>
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}h2
+{
+font-size:70px;
+text-size-70px;
+text-align:center;
+color:black;
+font-family: 'Roboto Slab', serif;
+background-image:url("himlayan.jpg");
+margin:0px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+body
+{
+background-image:url("fi.jpg");
+
+background-repeat:no-repeat;
+background-size:cover;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+form
+{
+font-family: 'Crete Round', serif;
+font-size:20px;
+}
+h1
+{
+font-family: 'Ramabhadra', sans-serif;
+font-size:40px;
+}
+@{
+newPassword = Request["newPassword"];
+confirmPassword = Request["confirmPassword"];
+token = Request["token"];
+if IsPost
+{
+    // input testing is ommitted here to save space
+    retunValue = ResetPassword(token, newPassword); 
+}
+}
+</style>
+<body>
+
+<div><h2>HIMALYAN TOURISM</h2></div>
+<div class="topnav">
+ <a  href="#home"><a href="final 1.html">HOME</a></a>
+  <a href="#Gallery"><a href="gallery.html">GALLERY</a></a>
+<a href="#contact"> <a href="contact.html"> CONTACT US</a></a>
+  <a href="#about"><a href="about1.html">ABOUT US</a></a>
+<a href="#login"><a href="login1.html">LOGIN</a></a><a href="#SIGN UP"><a href="page2.html">Sign Up</a></a>
+</div>
+<div style="padding-left:16px">
+</div>
+<center>
+<h1>Change Password</h1>
+
+<form method="post" action="">
+
+<label for="newPassword">New Password:</label> 
+<input type="password" id="newPassword" name="newPassword" title="New password" />
+<br>
+<br>
+
+<label for="confirmPassword">Confirm Password:</label> 
+<input type="password" id="confirmPassword" name="confirmPassword" title="Confirm new password" />
+<br>
+<br>
+<label for="token">Password Token:</label> 
+<input type="text" id="token" name="token" title="Password Token" />
+<br>
+<br>
+<p class="form-actions">
+<input type="submit" value="Change Password" title="Change password" />
+</p>
+
+</form>
+</center>
+</body>
+</html>
